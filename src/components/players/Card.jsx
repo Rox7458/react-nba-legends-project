@@ -20,9 +20,10 @@ const Card = ({ data }) => {
       {!front && (
         <div className={cardStyle.backSide}>
           {data.statistics.map((stats) => (
-            <li>{stats}</li>
+            <div className={cardStyle.liContainer}>
+              <li className={cardStyle.li}>📎 {stats}</li>
+            </div>
           ))}
-          <h3>{data.name}</h3>
         </div>
       )}
     </div>
